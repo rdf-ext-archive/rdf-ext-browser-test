@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>test</title>
+    <link href="mocha.css" rel="stylesheet" />
+    <script src="promise.js"></script>
+</head>
+<body>
+    <div id="mocha"></div>
+    <script src="mocha.js"></script>
+    <script>
+        if (typeof initMochaPhantomJS === 'function') {
+            initMochaPhantomJS()
+        }
+
+        mocha.setup('bdd')
+    </script>
+    <script src="index.js"></script>
+    <script>
+        mocha.run()
+    </script>
+</body>
+</html>
