@@ -42,4 +42,4 @@ if (!test('-d', buildPath)) {
 copyModuleFiles(coreFiles)
 copyModuleFiles(packageFiles)
 
-exec('browserify test/*.js -d > ' + path.join(buildPath, 'index.js'))
+exec('browserify test/*.js -d -t babelify > ' + path.join(buildPath, 'index.js'))
